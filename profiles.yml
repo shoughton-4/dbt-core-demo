@@ -1,0 +1,71 @@
+dbt_core_demo:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      host: localhost
+      driver: "ODBC Driver 18 for SQL Server"
+      schema: dbo
+      login_timeout: 300
+      query_timeout: 300
+      #uid: postgres
+      #pwd: buddybear7
+      windows_login: true
+      port: 1433
+      database: AdventureWorksDW2022
+      schema: dbo
+      threads: 1
+
+  outputs:
+    test:
+      type: sqlserver # database type
+      host: localhost
+      driver: "ODBC Driver 18 for SQL Server"
+      schema: dbo
+      login_timeout: 300
+      query_timeout: 300      
+      #uid: postgres
+      #pwd: buddybear7
+      windows_login: true
+      port: 1433      
+      database: AdventureWorksDW2022      
+      schema: dbo
+      threads: 1 
+
+  outputs:
+    prod:
+      type: sqlserver # database type
+      host: localhost
+      driver: "ODBC Driver 18 for SQL Server"
+      schema: dbo
+      login_timeout: 300
+      query_timeout: 300      
+      #uid: postgres
+      #pwd: buddybear7
+      windows_login: true
+      port: 1433      
+      database: AdventureWorksDW2022      
+      schema: dbo
+      threads: 1              
+
+  #outputs:
+  #  dev:
+  #    type: postgres
+  #    host: localhost
+  #    user: postgres
+  #    password: buddybear7
+  #    port: 5432      
+  #    database: testdb      
+  #    schema: public
+  #    threads: 1              
+
+  #outputs:
+  #  prod:
+  #    type: postgres
+  #    host: localhost
+  #    user: postgres
+  #    password: buddybear7
+  #    port: 5432      
+  #    database: testdb      
+  #    schema: public
+  #    threads: 1            
